@@ -11,8 +11,7 @@ def clean_desc(s):
     s = re.sub(r'[^a-zA-Z]', ' ', s)
     s = word_tokenize(s)
     p = [word for word in s if word not in set(stopwords.words('english'))]
-    sent = ' '.join(p)
-    return sent
+    return ' '.join(p)
 
 
 def clean_struct_table_implicit(dataset, descCol, itemCol):

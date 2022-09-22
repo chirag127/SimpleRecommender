@@ -48,9 +48,7 @@ st.text("")
 
 buffer1, col1, buffer2 = st.columns([1.45, 1, 1])
 
-is_clicked = col1.button(label="Recommend")
-
-if is_clicked:
+if is_clicked := col1.button(label="Recommend"):
     dataframe = recommend_table(session.options, movie_count=session.slider_count, tfidf_data=tfidf)
 
 st.text("")
